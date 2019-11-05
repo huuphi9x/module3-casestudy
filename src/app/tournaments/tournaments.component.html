@@ -1,0 +1,15 @@
+<a routerLink="/create-tournaments">Create Tournaments</a>
+<table id="tournaments">
+  <tr>
+    <td>Tournament</td>
+    <td>National</td>
+    <td>Edit</td>
+    <td>Delete</td>
+  </tr>
+  <tr *ngFor="let item of output; index as i">
+    <td>{{item.name}}</td>
+    <td>{{item.national.name}}</td>
+    <td><button [routerLink]="['/edit-tournaments',item.id]">Edit</button></td>
+    <td><button (click)="deleteTournaments(item.id)">Delete</button></td>
+  </tr>
+</table>

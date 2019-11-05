@@ -1,0 +1,16 @@
+<a routerLink="/create-national">Create National</a>
+<table id="national">
+  <tr>
+    <td>National Name</td>
+    <td>Edit</td>
+    <td>Delete</td>
+  </tr>
+  <tr *ngFor="let item of output; index as i">
+    <td>{{item.name}}</td>
+    <td><button [routerLink]="['/edit-national',item.id]">Edit</button></td>
+    <td><button (click)="deleteNational(item.id)">Delete</button></td>
+  </tr>
+</table>
+
+
+
